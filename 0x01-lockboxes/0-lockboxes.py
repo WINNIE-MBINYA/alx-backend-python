@@ -3,6 +3,7 @@
 Module for canUnlockAll function.
 """
 
+
 def canUnlockAll(boxes):
     """
     Determines if all boxes can be opened.
@@ -15,5 +16,5 @@ def canUnlockAll(boxes):
         if key < len(boxes) and not unlocked[key]:
             unlocked[key] = True
             keys.extend(boxes[key])
-    
+
     return all(unlocked)
