@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 
-import asyncio
 from typing import List
-from 0-async_generator import async_generator
+
+import asyncio
+from . import async_generator  # Import from the previous module
 
 
-async def async_comprehension() -> List[float]:
+async def async_comprehension() -> List[int]:
     """
-    Coroutine that collects 10 random numbers from async_generator.
+    Collects 10 random numbers using an async comprehension over the
+    async_generator and returns them as a list.
     """
-    return [i async for i in async_generator()]
+
+    return [async_num async for async_num in async_generator()]
