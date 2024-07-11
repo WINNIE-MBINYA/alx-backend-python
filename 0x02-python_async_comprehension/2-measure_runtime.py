@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+""""Import both async_generator and async_comprehension modules"""
+
 import asyncio
 import time  # Import the time module for time measurement
 async_comprehension = __import__('1-async_comprehension').async_comprehension
