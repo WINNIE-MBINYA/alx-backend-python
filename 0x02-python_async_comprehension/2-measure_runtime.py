@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
 import asyncio
-from . import async_comprehension  # Import from the previous module
 import time  # Import the time module for time measurement
+async_comprehension = __import__('1-async_comprehension').async_comprehension
+
 
 async def measure_runtime() -> float:
     """
@@ -19,7 +20,8 @@ async def measure_runtime() -> float:
       and potential I/O operations, which contribute to the overall runtime.
 
     - asyncio aims to optimize for concurrency, not necessarily strict
-      parallelization. It might interleave coroutines based on available resources
+      parallelization.
+      It might interleave coroutines based on available resources
       and priorities.
 
     - Therefore, the observed runtime around 10 seconds reflects the combined
